@@ -1,7 +1,10 @@
-import service.ApiService;
+import service.ApiPetService;
+import service.ApiUserService;
 import util.SystemProperties;
 
 public abstract class BaseTest {
 
-    ApiService apiService = new ApiService(SystemProperties.APPLICATION_URL);
+    ApiPetService apiPetService = new ApiPetService(SystemProperties.APPLICATION_URL);
+    ApiUserService apiUserService = new ApiUserService(SystemProperties.APPLICATION_URL);
+
 }
