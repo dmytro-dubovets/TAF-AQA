@@ -1,31 +1,28 @@
 package model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.experimental.Accessors;
-import util.FakeDataGenerator;
+import lombok.NoArgsConstructor;
+import util.FakeUserDataGenerator;
 
 @Data
-@Accessors(chain = true)
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
 
     private Long id;
-
     private String userName;
-
     private String firstName;
-
     private String lastName;
-
     private String email;
-
     private String password;
-
     private String phone;
-
     private Integer userStatus;
 
     public static User getFakeUser() {
-        return new FakeDataGenerator().getFakeUser();
+        return new FakeUserDataGenerator().getFakeUser();
     }
 
 }
