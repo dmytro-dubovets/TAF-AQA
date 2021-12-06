@@ -12,6 +12,7 @@ import java.util.List;
 public class ApiPetService {
 
     private final String FIND_PETS_BY_STATUS = "/pet/findByStatus";
+
     private final RequestSpecification requestSpecification;
 
     public ApiPetService(String applicationUrl) {

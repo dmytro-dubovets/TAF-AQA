@@ -20,14 +20,13 @@
         <slf4j.version>1.7.32</slf4j.version>
         <junit.version>5.8.1</junit.version>
         <jackson.version>2.13.0</jackson.version>
+        <awaitility.version>4.1.1</awaitility.version>
 
-        <spring.core.version>5.3.12</spring.core.version>
-        <spring.web.version>5.3.12</spring.web.version>
+        <spring.core.version>5.3.13</spring.core.version>
+        <spring.web.version>5.3.13</spring.web.version>
 
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <maven.surfire.plugin.version>2.22.2</maven.surfire.plugin.version>
-
-        <application.url>https://petstore.swagger.io/v2</application.url>
     </properties>
 
     <dependencies>
@@ -94,6 +93,12 @@
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.awaitility</groupId>
+            <artifactId>awaitility</artifactId>
+            <version>${awaitility.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -107,9 +112,6 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven.surfire.plugin.version}</version>
                     <configuration>
-                        <systemPropertyVariables>
-                            <application.url>${application.url}</application.url>
-                        </systemPropertyVariables>
                         <includes>**/*Test.java</includes>
                     </configuration>
                 </plugin>
